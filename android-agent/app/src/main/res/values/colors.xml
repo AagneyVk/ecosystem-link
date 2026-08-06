@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core background palette -->
+    <color name="bg_void">#FF000000</color>
+    <color name="bg_surface">#FF0A0A0A</color>
+    <color name="bg_card">#FF111111</color>
+    <color name="bg_elevated">#FF1A1A1A</color>
+    <color name="border">#FF1E1E1E</color>
+
+    <!-- Neon accents -->
+    <color name="neon_green">#FF00FF87</color>
+    <color name="neon_green_dim">#FF00CC6A</color>
+    <color name="neon_cyan">#FF00D4FF</color>
+    <color name="neon_amber">#FFFFB300</color>
+    <color name="neon_red">#FFFF4444</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFE0E0E0</color>
+    <color name="text_secondary">#FF888888</color>
+    <color name="text_on_accent">#FF000000</color>
+
+    <!-- Launcher Icon Colors -->
+    <color name="ic_launcher_background">#FF000000</color>
+</resources>

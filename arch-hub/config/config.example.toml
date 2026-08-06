@@ -1,0 +1,34 @@
+# Example Ecosystem Hub configuration.
+# Copy to ~/.config/ecosystem/config.toml and customise.
+
+# Storage root for all transferred artifacts.
+storage_root = "~/.local/share/ecosystem"
+
+# WebSocket control plane (Android ↔ Hub)
+# Set each remote-facing host explicitly to the phone-reachable VPN address.
+# Loopback is the safe default; never use 0.0.0.0 on an untrusted network.
+ws_host = "127.0.0.1"
+ws_port = 8765
+
+# HTTP file-transfer endpoint (Android → Hub)
+transfer_host = "127.0.0.1"
+transfer_port = 8766
+
+# Admin HTTP API — localhost only, for CLI / automation triggers
+admin_host = "127.0.0.1"
+admin_port = 8767
+
+# Web UI — serves the control dashboard in your browser
+ui_host = "127.0.0.1"
+ui_port = 8768
+
+# Streaming relay — MJPEG frames from Android to browser
+streaming_host = "127.0.0.1"
+streaming_port = 8769
+
+# Pre-shared secret for Android handshake authentication.
+# Leave blank to disable (not recommended).
+shared_secret = ""
+
+log_level = "INFO"
+session_retention_seconds = 3600

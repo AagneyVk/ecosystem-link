@@ -1,0 +1,55 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+local.properties
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+google-services.json
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.test-tmp/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Android / Gradle
+.gradle/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+android-agent/local-maven/
+
+# Runtime data and recordings
+*.apk
+*.aab
+*.m4a
+*.mp4
+*.webm
+*.jpg
+*.jpeg
+*.png
+*.partial
+config.toml

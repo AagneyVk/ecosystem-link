@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  hub:
+    name: Python hub
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: arch-hub
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: |
+            arch-hub/requirements.txt
+            arch-hub/requirements-dev.txt
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+      - run: python -m compileall -q ecosystem_hub tests
+
+  android:
+    name: Android agent
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: android-agent
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+      - uses: android-actions/setup-android@v3
+      - run: chmod +x gradlew
+      - run: ./gradlew testDebugUnitTest lintDebug assembleDebug --no-daemon
+

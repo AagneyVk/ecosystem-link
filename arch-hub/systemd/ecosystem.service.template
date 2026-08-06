@@ -1,0 +1,24 @@
+[Unit]
+Description=Ecosystem Hub - personal device ecosystem control plane
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=__VENV_DIR__/bin/python -m ecosystem_hub.main --config __CONFIG_PATH__
+WorkingDirectory=__INSTALL_DIR__
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+# Hardening. The hub only needs network access and its own storage dir.
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=%h/.local/share/ecosystem %h/.config/ecosystem
+PrivateTmp=true
+
+[Install]
+WantedBy=default.target

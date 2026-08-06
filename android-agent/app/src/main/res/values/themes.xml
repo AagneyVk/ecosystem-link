@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Base dark theme — using Material3 parent.
+        Applied as the app theme in AndroidManifest.xml.
+    -->
+    <style name="Theme.EcosystemAgent" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Material3 library attributes (NO android: prefix needed for these) -->
+        <item name="colorPrimary">@color/neon_green</item>
+        <item name="colorOnPrimary">@color/text_on_accent</item>
+        <item name="colorPrimaryContainer">@color/bg_surface</item>
+        <item name="colorOnPrimaryContainer">@color/neon_green</item>
+        <item name="colorSecondary">@color/neon_cyan</item>
+        <item name="colorOnSecondary">@color/text_on_accent</item>
+        <item name="colorSurface">@color/bg_surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorError">@color/neon_red</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorOutline">@color/border</item>
+        <item name="colorSurfaceVariant">@color/bg_card</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <!-- Android system attributes (REQUIRE android: prefix) -->
+        <item name="android:windowBackground">@color/bg_void</item>
+        <item name="android:statusBarColor">@color/bg_void</item>
+        <item name="android:navigationBarColor">@color/bg_void</item>
+    </style>
+
+    <style name="Theme.EcosystemAgent.CompanionActivity" parent="Theme.EcosystemAgent">
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+</resources>

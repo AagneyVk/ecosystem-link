@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ecosystem // Control</title><link rel="stylesheet" href="/static/style.css"></head><body>
+<aside class="rail"><div class="brand"><span class="mark">E</span><div>ECOSYSTEM<small>DEVICE CONSOLE</small></div></div>
+<nav id="nav"></nav><button class="stop" id="stop-all">STOP ALL</button></aside>
+<header><button id="menu">☰</button><div><strong id="device-name">NO DEVICE</strong><span id="endpoint">Awaiting agent</span></div><div class="header-stats"><span id="health" class="pill off">OFFLINE</span><span id="latency">— ms</span><span id="ops">0 operations</span></div></header>
+<main id="main"></main><div id="toast" aria-live="polite"></div>
+<dialog id="viewer"><button class="viewer-close" data-viewer="close">×</button><button class="viewer-nav prev" data-viewer="prev">‹</button><div class="viewer-stage" id="viewer-stage"><img id="viewer-image" alt="Captured media"></div><button class="viewer-nav next" data-viewer="next">›</button><aside class="viewer-info" id="viewer-info"></aside></dialog>
+<dialog id="error-dialog"><form method="dialog"><button class="viewer-close">×</button><h2>OPERATION FAILED</h2><div id="error-detail"></div></form></dialog>
+<script src="/static/app.js"></script></body></html>
